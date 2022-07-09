@@ -48,6 +48,11 @@ window.onload = () => {
     const input = event.currentTarget.elements.search;
     const inputValue = input.value.trim();
 
+    if (category === inputValue) {
+      Notify.info('Already on the page');
+      return;
+    }
+
     if (!isGalleryEmpty()) {
       scrollTop();
       gallery.innerHTML = '';
@@ -58,10 +63,6 @@ window.onload = () => {
       return;
     }
 
-    if (category === inputValue) {
-      Notify.info('Already on the page');
-      return;
-    }
     category = inputValue;
     if (page !== 1) {
       page = 1;
