@@ -57,6 +57,7 @@ window.onload = () => {
       Notify.warning('Write some value');
       return;
     }
+
     if (category === inputValue) {
       Notify.info('Already on the page');
       return;
